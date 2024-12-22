@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Booking - Wisata Pulau Harapan</title>
+    <link rel="stylesheet" href="Tugas UAS.css"> <!-- Link ke file CSS -->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div>Wisata Pulau Harapan</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Paket Wisata UAS.html">Paket Wisata</a></li>
+            <li><a href="Booking UAS.html">Booking</a></li>
+            <li><a href="Gallery UAS.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="booking-container">
+            <h1>Booking Perjalanan</h1>
+            <form class="booking-form">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+                <label for="phone">Nomor HP:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor HP" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+                <label for="date">Tanggal Perjalanan:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="package">Pilih Paket Wisata:</label>
+                <select id="package" name="package">
+                    <option value="paket1">Paket BBQ Pantai</option>
+                    <option value="paket2">Paket Diving</opion>
+                    <option value="paket3">Paket Villa</option>
+                    <option value="paket4">Paket Perahu</option>
+                </select>
+
+                <label for="notes">Catatan Tambahan:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Masukkan catatan tambahan (opsional)"></textarea>
+
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelector('.booking-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the page from reloading
+            alert('Pesanan Anda berhasil dikirim! Kami akan segera menghubungi Anda.');
+            this.reset(); // Clear the form
+        });
+    </script>
+</body>
+
+</html>
